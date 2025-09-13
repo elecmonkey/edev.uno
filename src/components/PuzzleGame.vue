@@ -45,6 +45,7 @@ const go = () => {
         <p class="mt-2 text-sm text-indigo-700/80">
           在线拼图游戏 by
           <a :href="authorHref" @click.stop target="_blank" rel="noopener" class="underline decoration-indigo-400 underline-offset-4 text-indigo-600 hover:text-indigo-700 font-bold">月正海角</a>
+          & SLA Group
         </p>
 
         <div class="mt-4 h-1 w-0 bg-gradient-to-r from-indigo-500 via-sky-400 to-cyan-400 transition-all duration-300 group-hover:w-full"></div>
