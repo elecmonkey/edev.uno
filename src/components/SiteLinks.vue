@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import SiteCard from './SiteCard.vue'
 import PuzzleGame from './PuzzleGame.vue'
+import JsonPacker from './JsonPacker.vue'
+import KnownBoard from './KnownBoard.vue'
 
 type Site = {
   title: string
@@ -11,12 +13,10 @@ type Site = {
 }
 
 const sites: Site[] = [
-  { title: 'Elecmonkey\'s Garden', href: 'https://www.elecmonkey.com', desc: '个人博客' },
-  { title: 'GitHub Homepage', href: 'https://github.com/elecmonkey', desc: '个人 GitHub 主页' },
+  { title: 'Elecmonkey\'s Garden', href: 'https://www.elecmonkey.com', desc: '小花园 - 个人博客' },
+  { title: 'GitHub Homepage', href: 'https://github.com/elecmonkey', desc: 'Elecmonkey GitHub 主页' },
   { title: 'Elecmonkey\'s Notebook', href: 'https://note.elecmonkey.com', desc: '一箱笔记本。' },
-  { title: 'Elecmonkey\'s Transphere', href: 'https://transphere.elecmonkey.com/', desc: '交通 · 轨道 · 旅行' },
-  { title: 'JSON Packer', href: 'https://json.edev.uno/', desc: 'JSON 压缩器' },
-  { title: 'Known Board', href: 'https://wk.edev.uno/', desc: '学习任务追踪看板'},
+  { title: 'Elecmonkey\'s Transphere', href: 'https://transphere.elecmonkey.com/', desc: '交通 · 轨道 · 旅行' }
 ]
 </script>
 
@@ -30,13 +30,26 @@ const sites: Site[] = [
 
       <section>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- First three sites -->
           <SiteCard
-            v-for="(site, i) in sites"
-            :key="i"
+            v-for="(site, i) in sites.slice(0, 3)"
+            :key="`top-` + i"
             :title="site.title"
             :href="site.href"
             :desc="site.desc"
           />
+
+          <!-- Remaining sites -->
+          <SiteCard
+            v-for="(site, i) in sites.slice(3)"
+            :key="`bottom-` + i"
+            :title="site.title"
+            :href="site.href"
+            :desc="site.desc"
+          />
+
+          <JsonPacker />
+          <KnownBoard />
           <PuzzleGame />
         </div>
       </section>
