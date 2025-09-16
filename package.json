@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build && vite build --ssr src/entry-server.ts --outDir dist-ssr && node scripts/prerender.mjs",
-    "build:ssg": "vue-tsc -b && vite build && vite build --ssr src/entry-server.ts --outDir dist-ssr && node scripts/prerender.mjs",
+    "build:core": "vue-tsc -b && vite build && vite build --ssr src/entry-server.ts --outDir dist-ssr && node scripts/prerender.mjs",
+    "build": "npm run build:ssg:nojs",
+    "build:ssg": "npm run build:core",
+    "build:ssg:nojs": "cross-env SSG_HYDRATE=false npm run build:core",
+    "build:ssg:partial": "cross-env SSG_NOJS_ROUTES=/ npm run build:core",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +20,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.7.0",
+    "cross-env": "^7.0.3",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.8.3",
     "vite": "^7.1.2",
