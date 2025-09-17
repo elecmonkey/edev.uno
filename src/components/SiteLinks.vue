@@ -3,6 +3,7 @@ import SiteCard from './SiteCard.vue'
 import PuzzleGame from './PuzzleGame.vue'
 import JsonPacker from './JsonPacker.vue'
 import KnownBoard from './KnownBoard.vue'
+import GithubIcon from './icon/github.vue'
 
 type Site = {
   title: string
@@ -25,7 +26,14 @@ const sites: Site[] = [
     <main class="mx-auto max-w-5xl px-4 py-16">
       <header class="mb-12">
         <h1 class="text-4xl md:text-5xl tracking-tight font-extralight"><span class="font-bold">E</span>lecmonkey is a <span class="font-bold">Dev</span>eloper</h1>
-        <p class="mt-3 text-xl md:text-2xl text-gray-600">Welcome to <span class="font-bold">EDEV.UNO</span></p>
+        <p class="mt-3 text-xl md:text-2xl text-gray-600">
+          Welcome to <span class="font-bold">EDEV.UNO</span>
+          <GithubIcon
+            class="ml-2 mb-[6px] align-middle text-gray-500 hover:text-gray-800 transition-colors"
+            :size="22"
+            href="https://github.com/elecmonkey/edev.uno"
+          />
+        </p>
       </header>
 
       <section>
