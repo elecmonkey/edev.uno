@@ -14,9 +14,9 @@ type Site = {
 }
 
 const sites: Site[] = [
-  { title: 'Elecmonkey\'s Garden', href: 'https://www.elecmonkey.com', desc: '小花园 - 个人博客' },
-  { title: 'GitHub Homepage', href: 'https://github.com/elecmonkey', desc: 'Elecmonkey GitHub 主页' },
-  { title: 'Elecmonkey\'s Notebook', href: 'https://note.elecmonkey.com', desc: '一箱笔记本。' },
+  { title: 'Elecmonkey\'s Garden', href: 'https://www.elecmonkey.com', desc: '个人技术博客' },
+  { title: 'GitHub Homepage', href: 'https://github.com/elecmonkey', desc: 'GitHub 主页' },
+  { title: 'EM Notebook', href: 'https://note.elecmonkey.com', desc: '一箱笔记本。' },
   { title: 'Elecmonkey\'s Transphere', href: 'https://transphere.elecmonkey.com/', desc: '交通 · 轨道 · 旅行' }
 ]
 </script>
