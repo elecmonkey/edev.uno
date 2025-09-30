@@ -1,19 +1,9 @@
-<script setup lang="ts">
-const cardHref = 'https://json.edev.uno/'
-
-const go = () => {
-  window.open(cardHref, '_blank', 'noopener')
-}
-</script>
-
 <template>
-  <div
-    class="group relative rounded-none cursor-pointer"
-    role="link"
-    tabindex="0"
-    @click="go()"
-    @keydown.enter.prevent="go()"
-    @keydown.space.prevent="go()"
+  <a
+    href="https://json.edev.uno/"
+    target="_blank"
+    rel="noopener"
+    class="group relative block rounded-none cursor-pointer"
   >
     <!-- Static left-down offset layer -->
     <div class="pointer-events-none absolute inset-0 -translate-x-1 translate-y-1 bg-white ring-1 ring-emerald-200/60"></div>
@@ -48,6 +38,6 @@ const go = () => {
         <div class="mt-4 h-1 w-0 bg-gradient-to-r from-emerald-500 via-green-400 to-lime-400 transition-all duration-300 group-hover:w-full"></div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
