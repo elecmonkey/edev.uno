@@ -19,6 +19,11 @@ const sites: Site[] = [
   { title: 'EM Notebook', href: 'https://note.elecmonkey.com', desc: '一箱笔记本。' },
   { title: 'Elecmonkey\'s Transphere', href: 'https://transphere.elecmonkey.com/', desc: '交通 · 轨道 · 旅行' }
 ]
+
+const openSourceSites: Site[] = [
+  { title: 'Slidev', href: 'https://sli.dev', desc: 'Presentation slides for developers' },
+  { title: 'VitePress', href: 'https://vitepress.dev', desc: 'Vite & Vue powered static site generator' }
+]
 </script>
 
 <template>
@@ -29,14 +34,15 @@ const sites: Site[] = [
         <p class="mt-3 text-xl md:text-2xl text-gray-600">
           Welcome to <span class="font-bold">EDEV.UNO</span>
           <GithubIcon
-            class="ml-2 mb-[6px] align-middle text-gray-500 hover:text-gray-800 transition-colors"
+            class="ml-2 align-middle text-gray-500 hover:text-gray-800 transition-colors"
             :size="22"
             href="https://github.com/elecmonkey/edev.uno"
           />
         </p>
       </header>
 
-      <section>
+      <section class="mb-16">
+        <h2 class="text-2xl md:text-3xl font-light mb-8 text-gray-800">My Projects</h2>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <!-- First three sites -->
           <SiteCard
@@ -59,6 +65,19 @@ const sites: Site[] = [
           <JsonPacker />
           <KnownBoard />
           <PuzzleGame />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl md:text-3xl font-light mb-8 text-gray-800">Open Source Contributions</h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <SiteCard
+            v-for="(site, i) in openSourceSites"
+            :key="`opensource-` + i"
+            :title="site.title"
+            :href="site.href"
+            :desc="site.desc"
+          />
         </div>
       </section>
     </main>
