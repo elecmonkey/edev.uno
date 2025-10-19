@@ -22,7 +22,8 @@ const sites: Site[] = [
 
 const openSourceSites: Site[] = [
   { title: 'Slidev', href: 'https://sli.dev', desc: 'Presentation slides for developers' },
-  { title: 'VitePress', href: 'https://vitepress.dev', desc: 'Vite & Vue powered static site generator' }
+  { title: 'VitePress', href: 'https://vitepress.dev', desc: 'Vite & Vue powered static site generator' },
+  { title: 'Rolldown', href: 'https://rolldown.rs', desc: 'Fast Rust-based bundler for JavaScript' }
 ]
 </script>
 
@@ -42,7 +43,7 @@ const openSourceSites: Site[] = [
       </header>
 
       <section class="mb-16">
-        <h2 class="text-2xl md:text-3xl font-light mb-8 text-gray-800">My Projects</h2>
+        <h2 class="text-2xl md:text-3xl font-light mb-8 text-gray-800">My Repos</h2>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <!-- First three sites -->
           <SiteCard
