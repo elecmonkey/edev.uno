@@ -23,7 +23,8 @@ const sites: Site[] = [
 const openSourceSites: Site[] = [
   { title: 'Slidev', href: 'https://sli.dev', desc: 'Presentation slides for developers' },
   { title: 'VitePress', href: 'https://vitepress.dev', desc: 'Vite & Vue powered static site generator' },
-  { title: 'Rolldown', href: 'https://rolldown.rs', desc: 'Fast Rust-based bundler for JavaScript' }
+  { title: 'Rolldown', href: 'https://rolldown.rs', desc: 'Fast Rust-based bundler for JavaScript' },
+  { title: 'tsdown', href: 'https://tsdown.dev', desc: 'The Elegant Library Bundler' }
 ]
 </script>
 
