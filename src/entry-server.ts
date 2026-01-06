@@ -8,3 +8,4 @@ export async function render() {
   return { appHtml }
 }
 
+// console.log(await render())

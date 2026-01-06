@@ -3,6 +3,8 @@ import SiteCard from './SiteCard.vue'
 import PuzzleGame from './PuzzleGame.vue'
 import JsonPacker from './JsonPacker.vue'
 import KnownBoard from './KnownBoard.vue'
+import AnnualGitReview from './AnnualGitReview.vue'
+import NewsPipeline from './NewsPipeline.vue'
 import GithubIcon from './icon/github.vue'
 
 type Site = {
@@ -66,6 +68,8 @@ const openSourceSites: Site[] = [
 
           <JsonPacker />
           <KnownBoard />
+          <AnnualGitReview />
+          <NewsPipeline />
           <PuzzleGame />
         </div>
       </section>
